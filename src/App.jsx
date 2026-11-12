@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Projects from './components/Projects'
+import Videos from './components/Videos'
 import Artists from './components/Artists'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -17,6 +18,7 @@ export default function App() {
         <Hero />
         <Services />
         <Projects />
+        <Videos />
         <Artists />
         <About />
         <Contact />

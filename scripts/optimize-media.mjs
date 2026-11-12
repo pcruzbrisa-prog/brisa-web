@@ -24,6 +24,8 @@ const photos = [
   ['IMG-20261106-WA0061.jpg', 'poster-brisa', 1024],
   ['IMG-20261106-WA0062.jpg', 'poster-junior-palacios', 1024],
   ['tributo daddy yankee.jpg', 'poster-gary-yankee', 1080],
+  // Fotos del portafolio 2026 (carpas y montajes)
+  ...['03','04','05','07','09','11','18','23','25','29','34','35','38','40','44'].map((k) => [`portafolio/carpa-${k}.jpg`, `carpa-${k}`, 1600]),
 ]
 
 for (const [file, name, width] of photos) {

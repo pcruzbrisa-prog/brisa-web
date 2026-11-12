@@ -12,10 +12,10 @@ export default function About() {
           <p className="eyebrow">Sobre BRISA</p>
           <h2 className="h2">Una presencia <em>ligera</em>, natural y memorable.</h2>
           <p className="lead">
-            En BRISA entendemos cada evento como una experiencia que merece ser pensada y cuidada en cada detalle.
+            Somos una productora técnica y artística con todo para llevar tu evento al siguiente nivel.
           </p>
           <p className="muted">
-            Conectamos espacios, personas, música y momentos con propuestas de identidad propia. Desde la idea inicial hasta la ejecución, acompañamos cada proyecto con sensibilidad, criterio y profesionalismo.
+            Representamos a artistas de carácter nacional y bandas corporativas para distintos tipos de eventos, y aportamos toda la parte técnica y artística. Todo es personalizado para cada cliente: nos caracterizan el profesionalismo y la capacidad de adaptarnos a cualquier tipo de evento.
           </p>
           <div className="values">
             {VALUES.map((v) => (

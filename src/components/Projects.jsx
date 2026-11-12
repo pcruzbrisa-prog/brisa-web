@@ -5,8 +5,12 @@ import Reveal from './Reveal'
 
 export default function Projects() {
   const [cat, setCat] = useState('Todos')
-  const [active, setActive] = useState(null) // índice dentro de la lista filtrada
-  const list = cat === 'Todos' ? PROJECTS : PROJECTS.filter((p) => p.cat === cat)
+  const [active, setActive] = useState(null) // índice dentro de la lista visible
+  const [expanded, setExpanded] = useState(false)
+  const filtered = cat === 'Todos' ? PROJECTS : PROJECTS.filter((p) => p.cat === cat)
+  const LIMIT = 12
+  const canExpand = filtered.length > LIMIT
+  const list = canExpand && !expanded ? filtered.slice(0, LIMIT) : filtered
 
   useEffect(() => {
     if (active === null) return
@@ -39,7 +43,7 @@ export default function Projects() {
           </div>
           <div className="filters" role="tablist" aria-label="Filtrar proyectos">
             {CATEGORIES.map((c) => (
-              <button key={c} role="tab" aria-selected={cat === c} className={`chip ${cat === c ? 'is-active' : ''}`} onClick={() => setCat(c)}>
+              <button key={c} role="tab" aria-selected={cat === c} className={`chip ${cat === c ? 'is-active' : ''}`} onClick={() => { setCat(c); setExpanded(false) }}>
                 {c}
               </button>
             ))}
@@ -63,6 +67,13 @@ export default function Projects() {
             </button>
           ))}
         </div>
+        {canExpand && (
+          <div className="gallery__more">
+            <button className="btn btn--ghost" onClick={() => setExpanded(!expanded)}>
+              {expanded ? 'Ver menos' : `Ver los ${filtered.length} proyectos`}
+            </button>
+          </div>
+        )}
       </div>
 
       {current && (

@@ -12,7 +12,7 @@ export default function Hero() {
             Hacemos que tu evento <span>suene, brille</span> y se recuerde.
           </h1>
           <p className="hero__lead">
-            Producción integral, gestión artística y sonido profesional para shows, festivales y activaciones que conectan a la gente con la música.
+            Productora técnica y artística con todo para llevar tu evento al siguiente nivel: artistas, sonido, iluminación, pantallas LED y más.
           </p>
           <div className="hero__ctas">
             <a href="#contacto" className="btn btn--gold">Cotiza tu evento</a>

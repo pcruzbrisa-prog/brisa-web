@@ -6,4 +6,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/brisa-web/',
+  // Permite abrir el servidor de desarrollo desde un túnel (VS Code Ports, ngrok, etc.)
+  server: { allowedHosts: true },
 })

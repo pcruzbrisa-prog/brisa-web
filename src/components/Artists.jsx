@@ -1,4 +1,4 @@
-import { ARTISTS } from '../data'
+import { ARTISTS, JOURNEY } from '../data'
 import { asset } from '../config'
 import Reveal from './Reveal'
 
@@ -21,6 +21,19 @@ export default function Artists() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="journey">
+          <h3 className="journey__title">Tu evento, de principio a fin</h3>
+          <ol className="journey__list">
+            {JOURNEY.map((j, i) => (
+              <li key={j.t}>
+                <span>{String(i + 1).padStart(2, '0')}</span>
+                <strong>{j.t}</strong>
+                <p>{j.d}</p>
+              </li>
+            ))}
+          </ol>
+        </Reveal>
       </div>
     </section>
   )
